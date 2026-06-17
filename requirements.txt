@@ -8,5 +8,4 @@ pycryptodome>=3.15.0
 paho-mqtt>=1.6.0
 pystyle>=2.0.0
 httpx>=0.24.0
-attr>=21.0.0
 zlapi>=1.0.0

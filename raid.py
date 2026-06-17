@@ -6,7 +6,6 @@ import re
 import string
 from os.path import basename
 from mimetypes import guess_type
-import attr
 import json
 import random
 from os.path import basename
