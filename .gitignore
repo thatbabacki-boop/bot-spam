@@ -43,3 +43,20 @@ ngonmess_data/
 users.json
 nhay.txt
 nhay1.txt
+nhay2.txt
+nhay2c.txt
+nhaydis.txt
+nhayso.txt
+message.txt
+
+# Data directories
+data/
+module/
+
+# Temporary files
+*.log
+*.tmp
+temp/
+
+# Render specific
+.render/

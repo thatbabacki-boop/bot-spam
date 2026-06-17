@@ -1,12 +1,19 @@
 services:
   - type: web
-    name: discord-bot
+    name: super-ultimate-bot-3
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python start.py
     envVars:
       - key: DISCORD_TOKEN
         sync: false
+        type: secret
       - key: ADMIN_IDS
         sync: false
+        type: secret
+      - key: PYTHON_VERSION
+        value: 3.9.0
     plan: free
+    region: oregon
+    healthCheckPath: /
+    autoDeploy: false

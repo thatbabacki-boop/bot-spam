@@ -23,6 +23,7 @@ import random
 import base64
 from anhmess import NanhMessenger
 from menu_view import MenuView
+
 from textwrap import shorten
 from typing import Dict, Any
 import multiprocessing
@@ -2193,7 +2194,6 @@ async def treoanhmess(
     def treoanhmess_worker():
         try:
             from anhmess import NanhMessenger
-from menu_view import MenuView
             messenger = NanhMessenger(cookie)
 
             while not stop_event.is_set():
@@ -3461,7 +3461,7 @@ async def tabnhaymess(interaction: discord.Interaction):
 @bot.event
 async def on_ready():
     await tree.sync()
-    print("✅ Bot đã online và đã sync slash command")            
+    print("Bot đã online và đã sync slash command")            
 
 @tree.command(name="treodis", description="Treo ng\u00f4n discord")
 @app_commands.describe(
@@ -5543,8 +5543,8 @@ async def menu(interaction: discord.Interaction):
 @tree.command(name="menu_new", description="Menu mới với giao diện đẹp")
 async def menu_new(interaction: discord.Interaction):
     embed = discord.Embed(
-        title="🚀 **MENU CHỨC NĂNG BOT**",
-        description="Chọn một mục từ menu bên dưới để xem chi tiết các lệnh!",
+        title="🚀 **SUPER ULTIMATE BOT 3.0**",
+        description="🎉 **Siêu Tối Thượng Version 3.0**\nĐa nền tảng - Tối ưu - Tích hợp AI & Công nghệ mới!",
         color=discord.Color.from_rgb(88, 101, 242)
     )
     
@@ -5556,10 +5556,10 @@ async def menu_new(interaction: discord.Interaction):
     )
     embed.add_field(
         name="⚡ **Các danh mục**",
-        value="📘 Facebook | 💬 Messenger | 🌀 Discord\n📱 Zalo | 📢 Telegram | 📸 Instagram\n📧 Gmail | 📲 SMS | 💼 WeChat | 🔧 Tiện ích",
+        value="📘 Facebook & Messenger | 🌀 Discord\n📱 Zalo | 📢 Telegram | 📸 Instagram\n📧 Gmail | 📲 SMS | 💼 WeChat | 🛠️ Quản lý",
         inline=False
     )
-    embed.set_footer(text="🛠 Bot by zawng dep chai | Made with ❤️")
+    embed.set_footer(text="🛠 Super Ultimate Bot 3.0 by zawng dep chai")
     
     view = MenuView()
     await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
